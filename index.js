@@ -1,13 +1,10 @@
-import readlineSync from "readline-sync";
+const readline = require("readline-sync");
 
+let atributo = "";
+const categoria = [];
 
-const propriedades = [];
-let inserir = "";
-
-while (inserir != "sair") {
-  propriedades.push(inserir);
-  inserir = readlineSync
-    .question("insira uma propriedade CSS: ")
-    .toLocaleLowerCase();
+while (atributo != "exit") {
+  categoria.push(atributo);
+  atributo = readline.question("Adicione um atributo do CSS: ").toLocaleLowerCase();
 }
-console.log((propriedades.sort().join("\n")));
+console.log((`${categoria.sort().join('\n')}`));
